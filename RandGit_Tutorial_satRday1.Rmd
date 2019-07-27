@@ -50,7 +50,7 @@ class: inverse, right
 
 
 .pull-right[
-<img style="float: center; margin: 0px 0px 0px 0px;" src="pics/Github.png" width="50" height="50"/>
+<img style="float: center; margin: 0px 0px 0px 0px;" src="pics/cat.png" width="50" height="50"/>
 
 * free open source version control system `r emo::ji("heavy_check_mark")`
 * platform for collaborating and sharing `r emo::ji("heavy_check_mark")`
