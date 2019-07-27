@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Working with R &amp; GitHub in RStudio</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Olusoji Oluwafemi Daniel" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="cols.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+class: inverse, right
+
+&lt;div style="text-align: left"&gt;
+&lt;img style="float: center; margin: 0px 15px 15px 0px;" src="pics/Rlogo.png" width="80" height="100"/&gt;
+&lt;img style="float: center; margin: 0px 15px 15px 0px;" src="pics/whiteplus.png" width="40" height="40"/&gt;
+&lt;img style="float: center; margin: 0px 15px 15px 0px;" src="pics/Octocat.png" width="80" height="100"/&gt;
+&lt;/div&gt;
+
+## Using R &amp; Git for Collaborative Work &lt;br&gt; (Practical) &lt;br&gt; UI R Users Group, satRday
+
+#### Owotomo O. E. &lt;br&gt; Olusoji O. D.  &lt;br&gt; Materials: https://github.com/R-Ibadan-Users-Group/BBNAIJA/tree/master/Tutorials
+
+---
+
+# Creating a GitHub Repo
+
+![Creating A New Repo](animation/newrepo.gif)
+
+&lt;div style="text-align: center"&gt; Quite Easy, isn't it? 😋 &lt;/div&gt;
+
+* Create a repository (repo) in your GitHub account titled `First_Project` 😄
+
+---
+
+# Creating a RPoject in RStudio
+
+![Creating A New Repo](animation/newproject.gif)
+
+&lt;div style="text-align: center"&gt; Quite Easy, isn't it? 😋 &lt;/div&gt;
+
+* Create a Project in **RStudio** using the URL of the repo you created 😄
+
+---
+
+# Creating an RMarkdown File
+
+![Creating A New Repo](animation/newrmarkdown.gif)
+
+---
+
+# Basic Git Commands
+
+** git add . ** 👉 to add your local changes
+
+** git commit -m "description_message_here" ** 👉 to commit the changes made
+
+** git push origin master ** 👉 to push changes to the remote master repo
+
+** git pull repo_url/repo_ssh** to pull changes made to the remote repo
+
+### Some Bonus😄
+
+* Should you forget to add the remote URL or want to connect a local repo to a remote one;
+  - ** git remote add Repo_remote_URL** 👉 adds a remote URL to your local repo.
+* Want to initialize a repo locally 
+  - ** git init ** 👉 initialize a local repo.
+* To add all changes made except a file
+  - ** git add -u **
+  - ** git reset -- file_name **
+  - procedd with commit and push as usual
+  
+---
+
+# Let's Play with Some Data
+
+&lt;iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6HtzYO7ylxx55F7nRqf8JFMGb6OhEQzspmIOjBVD9Zd2tdA/viewform?usp=sf_link/viewform?embedded=true" width="750" height="350" frameborder="0" marginheight="0" marginwidth="0"&gt;loading...&lt;/iframe&gt;
+
+&lt;br&gt;
+* Create a `Rmd` file named `first.Rmd`. Check the file [here](http://rpubs.com/oodaniel/UIsatRday) and try to make your `first.Rmd` look like the this. Populate the missing parts and report the analysis of the data gathered.
+
+
+
+---
+
+# What about Collaboration? (Understanding Branches)
+
+`Git branches` provides a framework for several people to work on the same project and file 😎
+
+* Let us begin with the `BBNAIJA` project (close the current project and do the following in a fresh `RStudio session`);
+
+    + Get an invitation to collaborate on a GitHub repo. (You are all being invited to the `BBNAIJA` project)
+
+    + Clone the repo by copying the `SSH` or `https` link and running **git pull SSH/https_link** in your `RStudio` terminal.
+
+    + Type **git checkout -b branch_name** in the `Terminal` to create your branch.
+    
+    + Use **git checkout branch_name** to switch between branches.
+    
+    + use **git commit** as usual
+     
+    + use **git push origin branch_name** to push to your branch.
+    
+    + use **git pull origin friend_branch_name** to pull changes your friend's changes.
+    
+---
+    
+# Introducing The BBNAIJA Project
+
+* The project aims at the following;
+    - extract data about BBANIJA from a social-media platform.
+    - tidy and explore this data
+    - predict chances of nominated housemates getting evicted using machine learning
+    - write reports and build deliverables about this
+    
+* There is an `index.Rmd` file in the `BBNAIJA` repo you cloned which we will all be working on over the next few weeks.
+
+  - You will all be divided into groups and each group will be working on different sections after the next set of lessons (`tidyverse` &amp; `twitteR`)
+
+* ⚠️ Don't merge your pull requests for the `BBNAIJA` projects, there is a special admin (`Abel`) to do that.
+
+---
+
+# Not to Forget the Thank Yous 😆
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+
+&lt;br&gt;
+### ........................... Thank You all 👨‍🏫 👩‍🏫.....................................
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="cols_macro.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

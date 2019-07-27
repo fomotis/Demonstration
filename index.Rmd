@@ -1,0 +1,130 @@
+---
+title: "Working with R & GitHub in RStudio"
+author: "Olusoji Oluwafemi Daniel"
+date: "23/07/2019"
+output: 
+  xaringan::moon_reader:
+    css: ["default", "rladies", "rladies-fonts", "cols.css"]
+    lib_dir: libs
+    seal: false
+    nature:
+      beforeInit: "cols_macro.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE,	
+                      warning = FALSE)
+options(htmltools.dir.version = FALSE)
+```
+
+
+class: inverse, right
+
+<div style="text-align: left">
+<img style="float: center; margin: 0px 15px 15px 0px;" src="pics/Rlogo.png" width="80" height="100"/>
+<img style="float: center; margin: 0px 15px 15px 0px;" src="pics/whiteplus.png" width="40" height="40"/>
+<img style="float: center; margin: 0px 15px 15px 0px;" src="pics/Octocat.png" width="80" height="100"/>
+</div>
+
+## Using R & Git for Collaborative Work <br> UI R Users Group, satRday
+
+#### Owokotomo O. E. <br> Olusoji O. D.  <br> Materials: https://github.com/R-Ibadan-Users-Group/BBNAIJA/tree/master/Tutorials
+
+---
+
+# R & Git
+
+.pull-left[
+<img style="float: center; margin: 0px 0px 0px 0px;" src="pics/Rlogo.png" width="50" height="50"/>
+
+* free open source statistical software `r emo::ji("thumbsup")`
+* integrate easily with other languages (`Python`, `C++`) `r emo::ji("thumbsup")`
+* fantastic community `r emo::ji("thumbsup")`
+* awesome ecosystem of packages `r emo::ji("thumbsup")`
+* R became pregnant at some point and gave birth to `Tidyverse` `r emo::ji("smile")`
+]
+
+
+.pull-right[
+<img style="float: center; margin: 0px 0px 0px 0px;" src="pics/Github.png" width="50" height="50"/>
+
+* free open source version control system `r emo::ji("heavy_check_mark")`
+* platform for collaborating and sharing `r emo::ji("heavy_check_mark")`
+* ease of integration with other platforms ([Travis](https://travis-ci.org/), [FigShare](https://figshare.com/)) `r emo::ji("heavy_check_mark")`
+]
+
+---
+
+# A Place for the Perfect Romance
+
+The romance between <img style="float: center; margin: 0px 0px 0px 0px;" src="pics/Rlogo.png" width="50" height="50"/>
+and <img style="float: center; margin: 0px 0px 0px 0px;" src="pics/Octocat.png" width="50" height="50"/> was perfected in 
+<img style="float: center; margin: 0px 0px 0px 0px;" src="pics/RStudioLogo.png" width="100" height="50"/>
+
+So, what is it about <img style="float: center; margin: 0px 0px 0px 0px;" src="pics/RStudioLogo.png" width="100" height="50"/>`r emo::ji("question_mark")`
+
+* Edit different type of files (`R`, `Rmd`, `Rnw`, `CSS`, `C++`, `Stan`, `Python`, ....)
+* Type your `Git` commands here `r emo::ji("point_right")` `Terminal` console 
+* Arrange your work in `projects``r emo::ji("smiling_face_with_sunglasses")`
+* Easy access to those cool functionalities of `R` `r emo::ji("smiling_face_with_sunglasses")`
+
+<br>
+<br>
+<br>
+--
+Hey! You can say bye bye to `Git bash` you know`r emo::ji("runner")`
+ 
+---
+
+# RMarkdown
+
+* Key tool for  `reproducibility` : Generate dfferent dynamic document format
+
+* A plain text file that has the extension `.Rmd`
+
+* The file contains 3 component;
+
+  + An (optional) YAML header surrounded by ` --- `
+  
+  + R code chunk surrounded by
+    
+    `` ```{r} ``
+    
+    `` ``` ``
+  
+  + Texts
+
+* To install: `install.packages("rmarkdown")`
+
+* In RStudio, go to `help` $\rightarrow$ `Mardown Quick Reference` to get started. 
+
+---
+
+# Let's Get Started
+
+* Download **R** [here](https://cran.r-project.org/).
+
+* For **Git**;
+  - Register for an account on [GitHub](https://github.com/)
+  - Download Git [here](https://git-scm.com/downloads)
+  - Open `Git bash` on your PC and run the following commands
+      * `git config --global user.name "your_GitHub_Username_here"`
+      * `git config --global user.mail "your_email_here"`
+      
+* Always a smart move to install [Rtools](https://cran.r-project.org/bin/windows/Rtools)
+<br>
+* Download **RStudio** [here](https://www.rstudio.com/products/rstudio/download/)
+
+<br>
+
+<br>
+
+<br>
+
+--
+
+<div style="text-align: center">....... and we go practical!`r emo::ji("face_savoring_food")` </div>

@@ -1,0 +1,81 @@
+---
+title: "R + Git Practical (UI R Users Group, satRday)"
+author: "Owokotomo Olajumoke Evangelina and Olusoji Oluwafemi Daniel"
+date: "26/07/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+## Reading Data from GoogleSheets
+
+To read the data from the participants googlesheet into **R**, you need the `googlesheets` and `googledrive` packages and perform some operations to save your token. Follow the steps below in an interactive **R** session.
+
+1. If you don't have access to the spreadsheet yet, click on this [link](https://docs.google.com/spreadsheets/d/1o34C2x1V_BS6K4yiNXh60OzVRmzoEJNod64fd8X-gQA/edit?usp=sharing) to get access.
+
+2. install the packages running 
+
+```{r, eval=FALSE} 
+install.packages(c("googledrive", "googlesheets")) 
+
+```  
+
+in **R**
+
+3. Run the following to save your google drive token access.
+
+```{r, eval=FALSE} 
+library(googlesheets)
+token <- gs_auth(cache = FALSE)
+gd_token()
+saveRDS(token, file = "my_sheet_token.rds")
+```
+
+The code block below will help you readin the data in the sheet into a **tibble** (sort of **dataframe** with some cool features) named *participant_data*. You will learn more about `tibbles` in the `tidyverse` part. 
+
+```{r reading_data}
+#install.packages(c("googledrive", "googlesheets"))
+library(googlesheets)
+library(googledrive)
+library(stringr)
+
+#path to my saved token. change this to path to your own saved token
+token <- googledrive::drive_auth(oauth_token = "../../my_sheet_token.rds")
+
+#get the name of a spreadsheets in your drive
+sheet_names <- googledrive::drive_find(type = "spreadsheet")$name
+
+# search for the sheet with the name Training Participants
+participant_sheet <- sheet_names[str_detect(sheet_names, "Training Participants")]
+
+#register the sheet
+gs_participant <- googlesheets::gs_title(participant_sheet)
+
+#finally read the data
+participant_data <- gs_read(gs_participant, ws = "Form Responses 1")
+
+```
+
+
+Congratulations, you have successfully read in the data. Now, let's try to use that data for some reporting and graphs. Create a **R** code block to report the associated numbers to each section. You can as well report these numbers in graphs of your choice.
+
+## Gender Distribution of Participants
+
+The percentage of ladies in this tutorial is... I am guessing we need more `RLadies`.
+
+
+## Operating System Mostly Used
+
+
+Well quite a number of us should be using windows. Possibly some Mac but I will be surprised to see a linux based OS.
+
+## R Experience
+
+
+I think most of us will be somewhere in the middle. 
+
+After you are done, save this file and push to the repo you created on **GitHub**.
+
+

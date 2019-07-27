@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/515713/ce71cd53f4fc47b0ba5ad76ae3da6371
+bundleId: https://api.rpubs.com/api/v1/document/515713/ce71cd53f4fc47b0ba5ad76ae3da6371
+url: http://rpubs.com/oodaniel/515713
+when: 1564218107.08599
