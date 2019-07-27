@@ -127,4 +127,4 @@ Hey! You can say bye bye to `Git bash` you know`r emo::ji("runner")`
 
 --
 
-<div style="text-align: center">....... and we go practical!`r emo::ji("face_savoring_food")` </div>
+....... and we go [PRACTICAL](https://fomotis.github.io/Demonstration/RandGit_Practical_satRday1.html)! `r emo::ji("face_savoring_food")`
